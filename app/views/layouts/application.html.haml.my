@@ -1,0 +1,31 @@
+!!!
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title BioFlickr
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %meta{ :content => "en-us", "http-equiv" => "Content-Language" }/
+
+    = stylesheet_link_tag "/stylesheets/my_layout.css"
+    /  [if lte IE 7]
+    = stylesheet_link_tag "/stylesheets/patches/patch_my_layout.css" 
+    /  [endif]
+  %body
+    .page_margins
+      #border-top
+        #edge-tl/
+        #edge-tr/
+      .page
+        #topnav
+          / skip link navigation 
+          %a.skip{:title => "skip link", :href => "#navigation"} Skip to the navigation
+          %span.hideme .
+          %a.skip{:title => "skip link", :href => "#content"} Skip to the content
+          %span.hideme .
+        #header
+          %h1 Flickr photos
+        #main
+          = render_flash
+          = yield
+      #border-bottom
+        #edge-bl/
+        #edge-br/

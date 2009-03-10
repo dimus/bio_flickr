@@ -1,0 +1,6 @@
+@charset "UTF-8";
+@import url(../../yaml/core/iehacks.css);
+@media screen, projection {
+  * html .page_margins {
+    width: auto;
+    width: expression((document.documentElement && document.documentElement.clientHeight) ? ((document.documentElement.clientWidth < 740) ? "740px" : ((document.documentElement.clientWidth > (95 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "95em" : "auto" )) : ((document.body.clientWidth < 740) ? "740px" : ((document.body.clientWidth > (95 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "95em" : "auto" ))); } }
