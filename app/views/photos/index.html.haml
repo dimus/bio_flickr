@@ -1,1 +1,8 @@
-= debug session[:user_id]
+- if @current_user.yahoo_login.blank?
+  %p 
+    Enter your flickr login name to access and change data for your photos:
+  - form_for(@user) do |f|
+    = f.text_field :yahoo_login
+    = f.submit "Add"
+- else
+  = @user.yahoo_login

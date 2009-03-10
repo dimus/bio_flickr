@@ -1,7 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  
   map.root :controller => 'photos'
   
   map.resource :session
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  
+  map.resources :users
   
   
   
