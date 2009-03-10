@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: mysql
+  username: root
+  # socket: /tmp/mysql.sock #uncomment this if you have socket problems
+  password:
+  host: localhost
+
+development:
+  database: tuskit_dev
+  <<: *defaults
+
+test:
+  database: tuskit_test
+  <<: *defaults
+
+production:
+  database: tuskit
+  <<: *defaults

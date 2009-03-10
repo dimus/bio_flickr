@@ -1,0 +1,5 @@
+
+
+== Installation
+
+  sudo gem install ruby-openid
