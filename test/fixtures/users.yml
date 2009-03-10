@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  identity_url: MyString
+  yahoo_login: MyString
+
+two:
+  identity_url: MyString
+  yahoo_login: MyString

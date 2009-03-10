@@ -1,5 +1,6 @@
 <% form_tag(session_url) do %>
   <p>
+	<input type="hidden" name = "openid_identifier" value = "yahoo.com"/>
     <%= submit_tag 'Sign in with Yahoo Id', :disable_with => "Signing in&hellip;" %>
   </p>
 <% end %>

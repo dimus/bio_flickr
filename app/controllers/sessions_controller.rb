@@ -7,14 +7,13 @@ class SessionsController < ApplicationController
   protected
 
     def open_id_authentication
-      params[:openid_identifier] = "yahoo.com"
       authenticate_with_open_id do |result, identity_url|
         if result.successful?
-          if 1==1
-            successful_login
+          if @current_user = User.find_by_identity_url(identity_url)
           else
-            failed_login "Sorry, no user by that identity URL exists (#{identity_url})"
+             @current_user = User.create(:identity_url => identity_url)
           end
+          successful_login
         else
           failed_login result.message
         end
