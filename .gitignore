@@ -1,7 +1,10 @@
 config/database.yml
 config/flickr.yml
 config/tocken_cache.yml
+tocken_cache.yml
 *.xml
 *.sql
+*.swp
+*.swo
 log/*
 
