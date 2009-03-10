@@ -23,7 +23,8 @@ class SessionsController < ApplicationController
   
   private
     def successful_login
-      session[:user_id] = @current_user.id
+      current_user = @current_user
+      flash[:notice] = "You logged in sucessfully"
       redirect_to(root_url)
     end
 
